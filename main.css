@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --header-color:#18181B;
+    --list-color:#D4D4D8;
+    --bg-color:#FAFAF9;
+    --text-color:#52525A;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: "Sora",sans-serif;
+    font-size: 16px;
+    height: 100%;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding-right: 72px;
+    padding-left: 72px;
+    background-color: aliceblue;
+    width: 100%;
+    height:100%;
+    min-height: 100vh;
+}
+
+/*Right side*/
+
+.review-cards{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+    padding:0 50px;
+}
+.review-cards .review-card {
+    width: 340px;
+    height: auto;
+    padding: 25px 30px;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0 30px 100px 0 rgba(17, 23, 41, 0.05);
+}
+.review-star{
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+.star-bar {
+    display: flex;
+    gap: 4px;
+    margin-left: 15px;
+}
+.star{
+    width: 20px;
+    height: 20px;
+    background-image: url("/resources/Star_fill.svg");
+    background-size: cover;
+
+}
+.star-gray{
+    width: 20px;
+    height: 20px;
+    background-image: url("/resources/Star_fill_gray.svg");
+    background-size: cover;
+}
+.review-cards .name{
+    font-weight: 600;
+    margin:12px 0;
+}
+.review-card p{
+    font-size: 16px;
+    color:var(--text-color);
+    line-height: 2;
+}
+
+.review-card.left{
+    align-self: flex-start;
+}
+
+
+/*Left side*/
+.review-info{
+    flex: 1;
+}
+.review-info .header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 16px;
+    color: var(--header-color);
+    font-size: 36px;
+}
+.review-info .header img {
+    width: 50px;
+    height: 50px;
+}
+.review-info .text-body {
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+.checklist {
+    list-style:  none;
+    line-height: 2;
+}
+.checklist li {
+    font-size:14px;
+    padding-left:34px;
+    position: relative;
+    color:var(--text-color);
+}
+.checklist li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url("/resources/Done_ring_round_fill.svg");
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column;
+        padding-right: 42px;
+        padding-left: 42px;
+        gap: 0;
+    }
+    .review-cards{
+        flex-direction: column;
+        width: 70%;
+    }
+    .review-info{
+        margin-top: 20px;
+        flex:0.8;
+    }
+    .review-info .header{
+        margin-bottom:5px;
+    }
+    .review-info .text-body{
+        margin-bottom:14px;
+    }
+    .review-cards .name {
+        margin-top:8px;
+        margin-bottom:5px;
+    }
+    .review-card p{
+        line-height: 1.6;
+    }
+}
+@media (max-width: 412px) {
+    .container {
+        padding: 16px;
+    }
+    .review-cards
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+    .review-info{
+        flex:1;
+    }
+    .review-cards{
+        flex:1;
+    }
+
+}
+@media (max-width: 519px){
+    .review-cards
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+}
