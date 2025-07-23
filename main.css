@@ -60,14 +60,14 @@ body {
 .star{
     width: 20px;
     height: 20px;
-    background-image: url("./resources/Star_fill.svg");
+    background-image: url("resources/Star_fill.svg");
     background-size: cover;
 
 }
 .star-gray{
     width: 20px;
     height: 20px;
-    background-image: url("./resources/Star_fill_gray.svg");
+    background-image: url("resources/Star_fill_gray.svg");
     background-size: cover;
 }
 .review-cards .name{
@@ -127,7 +127,7 @@ body {
     transform: translateY(-50%);
     width: 24px;
     height: 24px;
-    background-image: url("./resources/Done_ring_round_fill.svg");
+    background-image: url("resources/Done_ring_round_fill.svg");
 }
 
 @media (max-width: 1024px) {
